@@ -2,10 +2,10 @@ package integer
 
 import "testing"
 
-const repeatCount=5
+
 
 func TestRepeat(t *testing.T){
-	repeated := Repeat("a")
+	repeated := Repeat("a", 5)
 	expected := "aaaaa"
 
 	if repeated != expected {
@@ -14,9 +14,9 @@ func TestRepeat(t *testing.T){
 
 }
 
-func Repeat(s string) string {
+func Repeat(s string,count int) string {
 	var repeated string
-	for i := 0; i < repeatCount; i++ {
+	for i := 0; i < count; i++ {
 		repeated += s
 	}
 	return repeated
@@ -24,6 +24,6 @@ func Repeat(s string) string {
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Repeat("a")
+		Repeat("a",5)
 	}
 }
