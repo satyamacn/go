@@ -1,0 +1,23 @@
+package integer
+
+import "testing"
+import "fmt"
+
+func TestAdder(t *testing.T){
+	sum := Add(2,2)
+	expected := 4
+
+	if sum != expected {
+		t.Errorf("expected '%d' but got '%d'", expected, sum)
+	}
+}
+
+func Add(i1, i2 int) int{
+	fmt.Println(i1+i2)
+	return i1+i2
+}
+
+func ExampleAdd(){
+	sum := Add(2,9)
+	fmt.Println(sum)
+}
