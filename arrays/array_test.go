@@ -24,10 +24,6 @@ func TestSum(t *testing.T) {
 			t.Errorf("got %d want %d given %v", got, want, numbers)
 		}
 	})
-	
-
-
-	
 }
 
 func Sum(numbers []int)int {
@@ -38,3 +34,4 @@ func Sum(numbers []int)int {
 	return sum
 
 }
+
