@@ -6,7 +6,7 @@ import (
 )
 
 
-func TestSumAll(t *testing.T) {
+ func TestSumAll(t *testing.T) {
 	got := SumAll([]int{3,4},[]int{5,5})
 	want := []int{7,10}
 
